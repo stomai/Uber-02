@@ -1,0 +1,79 @@
+table DIM_reviews
+	lineageTag: f902cc5c-f0e9-4897-bba7-78273be6f969
+
+	column review_id
+		dataType: int64
+		formatString: 0
+		lineageTag: d53e2866-fa9e-430f-b94e-92871326db5c
+		summarizeBy: sum
+		sourceColumn: review_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column trip_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 27c205b9-fb7b-40d8-9be8-947b1a53511f
+		summarizeBy: none
+		sourceColumn: trip_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviewer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 55bac236-996d-40eb-9bd4-96bbe06c3865
+		summarizeBy: sum
+		sourceColumn: reviewer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviewee_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3eb4e762-2103-441f-a41c-6fb42687834c
+		summarizeBy: sum
+		sourceColumn: reviewee_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rating
+		dataType: int64
+		formatString: 0
+		lineageTag: c3b6c33d-fab8-46a4-9052-2ab48d102a33
+		summarizeBy: sum
+		sourceColumn: rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column comment
+		dataType: string
+		lineageTag: e1bb6f3e-f6d7-4447-a75e-4da90f0668e6
+		summarizeBy: none
+		sourceColumn: comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviewed_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bb51b21c-cd28-4a99-b498-d758a3abd4ca
+		summarizeBy: none
+		sourceColumn: reviewed_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_reviews = m
+		mode: import
+		source =
+				let
+				    Origine = Odbc.DataSource("dsn=MySql_PowerBi", [HierarchicalNavigation=true]),
+				    uber_Database = Origine{[Name="uber",Kind="Database"]}[Data],
+				    dim_reviews_Table = uber_Database{[Name="dim_reviews",Kind="Table"]}[Data]
+				in
+				    dim_reviews_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

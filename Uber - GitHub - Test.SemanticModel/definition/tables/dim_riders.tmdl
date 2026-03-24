@@ -1,0 +1,70 @@
+table dim_riders
+	lineageTag: 3495dea1-e360-4dde-aac4-cc7b30ead67f
+
+	column rider_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 29e1db7c-b701-45ed-9440-2b6de7200969
+		summarizeBy: none
+		sourceColumn: rider_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rider_name
+		dataType: string
+		lineageTag: 4d2b1136-2cfa-4ebd-a2d9-58903d0b66ea
+		summarizeBy: none
+		sourceColumn: rider_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 2b7148e1-991b-47ec-a224-33cb4936e309
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_joined
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8bdb60ed-9d35-4df6-891f-3f196919c70c
+		summarizeBy: none
+		sourceColumn: date_joined
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column rider_rating
+		dataType: double
+		lineageTag: 4a0d1a53-f8d2-4770-ab12-5bc7a56f4304
+		summarizeBy: none
+		sourceColumn: rider_rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_trips
+		dataType: int64
+		formatString: 0
+		lineageTag: efe68317-c5a4-4db1-8b2e-d04e206ecda9
+		summarizeBy: none
+		sourceColumn: total_trips
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_riders = m
+		mode: import
+		source =
+				let
+				    Origine = Odbc.DataSource("dsn=MySql_PowerBi", [HierarchicalNavigation=true]),
+				    uber_Database = Origine{[Name="uber",Kind="Database"]}[Data],
+				    dim_riders_Table = uber_Database{[Name="dim_riders",Kind="Table"]}[Data]
+				in
+				    dim_riders_Table
+
+	annotation PBI_ResultType = Table
+

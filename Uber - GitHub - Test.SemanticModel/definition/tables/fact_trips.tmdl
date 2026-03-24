@@ -1,0 +1,162 @@
+table fact_trips
+	lineageTag: 3f9e27af-0db7-456c-862b-c278bc6977b8
+
+	column trip_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b2d432c9-fb53-4593-8712-ed22cb034289
+		summarizeBy: none
+		sourceColumn: trip_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rider_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 45531d08-748f-43ab-b565-11ff52a3496f
+		summarizeBy: none
+		sourceColumn: rider_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 21b48b8f-28e3-4e94-9d1d-9565757e5249
+		summarizeBy: none
+		sourceColumn: driver_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pickup_location_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 73424032-c23e-41d3-8561-21ca0e328c83
+		summarizeBy: sum
+		sourceColumn: pickup_location_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column dropoff_location_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a3c91361-568f-47e9-ab69-3d3ebd7568ef
+		summarizeBy: none
+		sourceColumn: dropoff_location_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_key
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8d6dd554-50b3-42a6-8183-1b088f484630
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ora_richiesta
+		dataType: string
+		lineageTag: ff0dff7f-2b97-4515-b3a5-3865e2fce97e
+		summarizeBy: none
+		sourceColumn: ora_richiesta
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 56f3e26e-a202-4412-acb0-97c93e70b6a1
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column distance_km
+		dataType: double
+		lineageTag: 9ce097fb-2b2e-4685-a31b-6672f707843b
+		summarizeBy: sum
+		sourceColumn: distance_km
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column duration_mins
+		dataType: int64
+		formatString: 0
+		lineageTag: e7dbaa86-7de9-4828-a6a0-df8c9ad2cac6
+		summarizeBy: sum
+		sourceColumn: duration_mins
+
+		annotation SummarizationSetBy = Automatic
+
+	column base_fare
+		dataType: double
+		lineageTag: 22532d79-172d-4618-b378-9a2746c88e40
+		summarizeBy: sum
+		sourceColumn: base_fare
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column surge_multiplier
+		dataType: double
+		lineageTag: 140bb4a1-ef12-496f-9323-50a09bb0d40f
+		summarizeBy: sum
+		sourceColumn: surge_multiplier
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_fare
+		dataType: double
+		lineageTag: f4b55f6c-7ef2-4c16-88ed-7ac18530cfb5
+		summarizeBy: sum
+		sourceColumn: total_fare
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column payment_method
+		dataType: string
+		lineageTag: 2e718413-ccac-46e8-9d61-fcc82c3a8491
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_amount
+		dataType: double
+		lineageTag: 1bef45c0-08c6-4608-86bf-09a30a37b670
+		summarizeBy: sum
+		sourceColumn: payment_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column payment_status
+		dataType: string
+		lineageTag: f513f40a-077c-4aba-833d-9a3da6821a03
+		summarizeBy: none
+		sourceColumn: payment_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_trips = m
+		mode: import
+		source =
+				let
+				    Origine = Odbc.DataSource("dsn=MySql_PowerBi", [HierarchicalNavigation=true]),
+				    uber_Database = Origine{[Name="uber",Kind="Database"]}[Data],
+				    fact_trips_Table = uber_Database{[Name="fact_trips",Kind="Table"]}[Data]
+				in
+				    fact_trips_Table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,112 @@
+table dim_drivers
+	lineageTag: e7ea46a6-7c7b-4d7e-a2f1-64713f10b8b0
+
+	column driver_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ddfad902-6eae-4af0-a5ca-8f7c297c79ad
+		summarizeBy: none
+		sourceColumn: driver_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_name
+		dataType: string
+		lineageTag: e0667b61-ebba-4862-85fb-040f3fa06ed2
+		summarizeBy: none
+		sourceColumn: driver_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 1c451fca-9999-4c60-8dae-f0602af87029
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_make
+		dataType: string
+		lineageTag: 1e3702c1-54ea-44b1-b1f6-1f6d1bffebbe
+		summarizeBy: none
+		sourceColumn: vehicle_make
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_model
+		dataType: string
+		lineageTag: 982faa8e-4351-4e01-b7a1-af66f8f6e9e8
+		summarizeBy: none
+		sourceColumn: vehicle_model
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_full
+		dataType: string
+		lineageTag: e499e234-ca07-40d8-b0ac-4e62ac642e06
+		summarizeBy: none
+		sourceColumn: vehicle_full
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 05bf31fa-7c49-4e7e-8937-db0c4f23456a
+		summarizeBy: none
+		sourceColumn: vehicle_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_rating
+		dataType: double
+		lineageTag: 3618937a-7f0e-403c-9d25-e8de65c82279
+		summarizeBy: none
+		sourceColumn: driver_rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column join_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 13bd9151-8ddf-493c-b75d-8f931f471899
+		summarizeBy: none
+		sourceColumn: join_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column is_active
+		dataType: int64
+		formatString: 0
+		lineageTag: dc156296-6464-4bd1-8634-5bc5e0852c76
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	column years_experience
+		dataType: int64
+		formatString: 0
+		lineageTag: c2662d9f-d995-448a-8026-3c5a7d93d7b1
+		summarizeBy: none
+		sourceColumn: years_experience
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_drivers = m
+		mode: import
+		source =
+				let
+				    Origine = Odbc.DataSource("dsn=MySql_PowerBi", [HierarchicalNavigation=true]),
+				    uber_Database = Origine{[Name="uber",Kind="Database"]}[Data],
+				    dim_drivers_Table = uber_Database{[Name="dim_drivers",Kind="Table"]}[Data]
+				in
+				    dim_drivers_Table
+
+	annotation PBI_ResultType = Table
+

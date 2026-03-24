@@ -1,0 +1,31 @@
+relationship 7debce90-54d2-83bf-f210-19a8e53e01db
+	fromColumn: fact_trips.driver_id
+	toColumn: dim_drivers.driver_id
+
+relationship ee4b99f2-fa26-f9d5-9816-0db84c496a06
+	fromColumn: fact_trips.rider_id
+	toColumn: dim_riders.rider_id
+
+relationship 742fee5e-6e12-8de0-d40a-3f2047513bca
+	fromColumn: fact_trips.date_key
+	toColumn: dim_date.date_key
+
+relationship 05f43138-7add-f0b4-a2ca-143beed84122
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: payments.trip_id
+	toColumn: fact_trips.trip_id
+
+relationship 3dda46d4-3a80-81fb-d492-62e58fce0acd
+	fromColumn: DIM_reviews.trip_id
+	toColumn: fact_trips.trip_id
+
+relationship 9a074bd6-e8ab-2309-aaa0-6bbde1bf3ebc
+	fromColumn: fact_trips.dropoff_location_id
+	toColumn: DIM_locations.location_id
+
+relationship dafc0eea-6b30-73ee-3452-2be693015218
+	isActive: false
+	fromColumn: fact_trips.pickup_location_id
+	toColumn: DIM_locations.location_id
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Uber - GitHub - Test"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dec83292-6122-4b07-b511-2943435ab2e5"
+  }
+}

@@ -1,0 +1,70 @@
+table DIM_locations
+	lineageTag: 68130ad9-ac96-49af-847b-b4fac6779c12
+
+	column location_id
+		dataType: int64
+		formatString: 0
+		lineageTag: abdcb56f-4f8d-4ad9-a5ad-55dea250421c
+		summarizeBy: none
+		sourceColumn: location_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column zone_name
+		dataType: string
+		lineageTag: 2f37a022-4c18-43a4-bf89-39efdd3b1ddf
+		summarizeBy: none
+		sourceColumn: zone_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 25112b9c-3db6-4343-92f7-b6711b8fcedc
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: de7da5f2-37bd-44fc-b113-dd5bf67b8c70
+		summarizeBy: none
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		lineageTag: 6eda20f7-4cd2-4099-bd40-e8089b769e30
+		summarizeBy: none
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column zone_type
+		dataType: string
+		lineageTag: 7d32f317-eb81-4661-9fec-45679a136d85
+		summarizeBy: none
+		sourceColumn: zone_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_locations = m
+		mode: import
+		source =
+				let
+				    Origine = Odbc.DataSource("dsn=MySql_PowerBi", [HierarchicalNavigation=true]),
+				    uber_Database = Origine{[Name="uber",Kind="Database"]}[Data],
+				    dim_locations_Table = uber_Database{[Name="dim_locations",Kind="Table"]}[Data]
+				in
+				    dim_locations_Table
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

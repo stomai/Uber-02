@@ -1,0 +1,25 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: it-IT
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["payments","fact_trips","DIM_reviews","dim_riders","dim_drivers","dim_date","cancellations","DIM_locations"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table payments
+ref table fact_trips
+ref table DIM_reviews
+ref table dim_riders
+ref table dim_drivers
+ref table dim_date
+ref table cancellations
+ref table DIM_locations
+
+ref cultureInfo en-US
+
