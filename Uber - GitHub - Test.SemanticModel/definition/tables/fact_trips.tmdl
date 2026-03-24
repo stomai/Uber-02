@@ -32,10 +32,10 @@ table fact_trips
 		dataType: int64
 		formatString: 0
 		lineageTag: 73424032-c23e-41d3-8561-21ca0e328c83
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: pickup_location_id
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column dropoff_location_id
 		dataType: int64
@@ -76,10 +76,10 @@ table fact_trips
 	column distance_km
 		dataType: double
 		lineageTag: 9ce097fb-2b2e-4685-a31b-6672f707843b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: distance_km
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -87,38 +87,38 @@ table fact_trips
 		dataType: int64
 		formatString: 0
 		lineageTag: e7dbaa86-7de9-4828-a6a0-df8c9ad2cac6
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: duration_mins
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column base_fare
 		dataType: double
 		lineageTag: 22532d79-172d-4618-b378-9a2746c88e40
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: base_fare
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column surge_multiplier
 		dataType: double
 		lineageTag: 140bb4a1-ef12-496f-9323-50a09bb0d40f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: surge_multiplier
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column total_fare
 		dataType: double
 		lineageTag: f4b55f6c-7ef2-4c16-88ed-7ac18530cfb5
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: total_fare
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

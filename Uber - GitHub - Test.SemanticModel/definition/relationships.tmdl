@@ -10,12 +10,6 @@ relationship 742fee5e-6e12-8de0-d40a-3f2047513bca
 	fromColumn: fact_trips.date_key
 	toColumn: dim_date.date_key
 
-relationship 05f43138-7add-f0b4-a2ca-143beed84122
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: payments.trip_id
-	toColumn: fact_trips.trip_id
-
 relationship 3dda46d4-3a80-81fb-d492-62e58fce0acd
 	fromColumn: DIM_reviews.trip_id
 	toColumn: fact_trips.trip_id

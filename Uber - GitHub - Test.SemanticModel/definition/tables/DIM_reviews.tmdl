@@ -5,10 +5,10 @@ table DIM_reviews
 		dataType: int64
 		formatString: 0
 		lineageTag: d53e2866-fa9e-430f-b94e-92871326db5c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: review_id
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column trip_id
 		dataType: int64
@@ -23,28 +23,28 @@ table DIM_reviews
 		dataType: int64
 		formatString: 0
 		lineageTag: 55bac236-996d-40eb-9bd4-96bbe06c3865
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: reviewer_id
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column reviewee_id
 		dataType: int64
 		formatString: 0
 		lineageTag: 3eb4e762-2103-441f-a41c-6fb42687834c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: reviewee_id
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column rating
 		dataType: int64
 		formatString: 0
 		lineageTag: c3b6c33d-fab8-46a4-9052-2ab48d102a33
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: rating
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column comment
 		dataType: string

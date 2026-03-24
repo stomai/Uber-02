@@ -10,19 +10,6 @@
       "nodes": [
         {
           "location": {
-            "x": 1763.2367905582039,
-            "y": 146.69982771992198
-          },
-          "nodeIndex": "cancellations",
-          "nodeLineageTag": "ab9469c3-1a41-4a7d-87aa-0a352d32145a",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
             "x": 638.42207590753844,
             "y": 90.5054935022958
           },
@@ -72,19 +59,6 @@
             "width": 234
           },
           "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 1027.638853786546,
-            "y": 0
-          },
-          "nodeIndex": "payments",
-          "nodeLineageTag": "471e9208-b287-413d-95e7-41a1a7e50398",
-          "size": {
-            "height": 282.46151299999997,
-            "width": 234
-          },
-          "zIndex": 7
         },
         {
           "location": {

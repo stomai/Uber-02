@@ -1,8 +1,10 @@
 table dim_date
 	lineageTag: 039c7479-cafe-409b-ab53-4a428e0237b7
+	dataCategory: Time
 
 	column date_key
 		dataType: dateTime
+		isKey
 		formatString: Long Date
 		lineageTag: 7e15cb5a-dda4-4999-95c1-f76ad5bb396f
 		summarizeBy: none
@@ -80,6 +82,29 @@ table dim_date
 		sourceColumn: tipo_giorno
 
 		annotation SummarizationSetBy = Automatic
+
+	hierarchy gerarchia
+		lineageTag: 2ef58aa5-e057-4592-a0bb-2319c3b9ecb6
+
+		level anno
+			lineageTag: 29ec4678-cee4-4e2d-9416-d4bea5dede84
+			column: anno
+
+		level trimestre
+			lineageTag: b3d2a3f9-e943-4cd1-b3aa-c31b2ec3cac0
+			column: trimestre
+
+		level mese_nome
+			lineageTag: 0dea47e9-3a1a-4b97-9ec1-aa024fb780d5
+			column: mese_nome
+
+		level mese_numero
+			lineageTag: f32815f2-b046-49c1-840c-4e370907b067
+			column: mese_numero
+
+		level giorno
+			lineageTag: adf1def7-a108-4713-b398-d657c0dd9831
+			column: giorno
 
 	partition dim_date = m
 		mode: import
