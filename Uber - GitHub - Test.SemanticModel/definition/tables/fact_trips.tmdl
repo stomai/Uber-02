@@ -133,10 +133,10 @@ table fact_trips
 	column payment_amount
 		dataType: double
 		lineageTag: 1bef45c0-08c6-4608-86bf-09a30a37b670
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: payment_amount
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
