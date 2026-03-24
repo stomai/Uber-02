@@ -64,7 +64,5 @@ table DIM_locations
 				in
 				    dim_locations_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

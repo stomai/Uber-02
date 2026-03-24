@@ -73,7 +73,5 @@ table DIM_reviews
 				in
 				    dim_reviews_Table
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 
