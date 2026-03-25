@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "38e0c0e25ebabb28000f",
+  "displayName": "Driver Performance",
+  "displayOption": "FitToWidth",
+  "height": 1500,
+  "width": 1280,
+  "objects": {
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Middle'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "18e751ac87ee9c0db38c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "9b29e76b399edffbc693",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "5ae1371a3697880b3384",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "03bb9734f51233817797",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "40dacb531134c7d03bce",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "b13f442d24bf725e42e3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "16acc8c390d75d917ebf",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "270825c3700d02fd076c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "6280265bfc6f3c2280d3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f8275cc257cd4b9bf456",
+      "target": "9bcb8fb4e396e334d14b",
+      "type": "NoFilter"
+    }
+  ]
+}
