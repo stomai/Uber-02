@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "7f44671bf9bf4c8a2057",
   "position": {
     "x": 0,
@@ -28,36 +28,6 @@
               "queryRef": "dim_drivers.driver_name",
               "nativeQueryRef": "Driver",
               "displayName": "Driver"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_veicoli"
-                    }
-                  },
-                  "Property": "Link_diretto_Foto"
-                }
-              },
-              "queryRef": "dim_veicoli.Link_diretto_Foto",
-              "nativeQueryRef": "Auto",
-              "displayName": "Auto"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_veicoli"
-                    }
-                  },
-                  "Property": "Standard_Uber"
-                }
-              },
-              "queryRef": "dim_veicoli.Standard_Uber",
-              "nativeQueryRef": "Standard",
-              "displayName": "Standard"
             },
             {
               "field": {
@@ -571,41 +541,6 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "dim_veicoli.Link_diretto_Foto"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
                   "Value": "'Center'"
                 }
               }
@@ -613,20 +548,6 @@
           },
           "selector": {
             "metadata": "dim_drivers.driver_name"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "dim_veicoli.Standard_Uber"
           }
         },
         {
@@ -807,20 +728,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "145.66667177615426D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "dim_veicoli.Standard_Uber"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "237.33333100896587D"
                 }
               }
@@ -828,20 +735,6 @@
           },
           "selector": {
             "metadata": "dim_drivers.driver_name"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "123.33333333333334D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "dim_veicoli.Link_diretto_Foto"
           }
         },
         {

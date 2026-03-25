@@ -54,7 +54,7 @@ table dim_drivers
 		dataType: int64
 		formatString: 0
 		lineageTag: 05bf31fa-7c49-4e7e-8937-db0c4f23456a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: vehicle_year
 
 		annotation SummarizationSetBy = Automatic
@@ -62,7 +62,7 @@ table dim_drivers
 	column driver_rating
 		dataType: double
 		lineageTag: 3618937a-7f0e-403c-9d25-e8de65c82279
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: driver_rating
 
 		annotation SummarizationSetBy = Automatic
@@ -84,7 +84,7 @@ table dim_drivers
 		dataType: int64
 		formatString: 0
 		lineageTag: dc156296-6464-4bd1-8634-5bc5e0852c76
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: is_active
 
 		annotation SummarizationSetBy = Automatic
