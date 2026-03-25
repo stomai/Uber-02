@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 269.27727199999987
       },
       "nodes": [
         {
           "location": {
             "x": 638.42207590753844,
-            "y": 90.5054935022958
+            "y": 135.75824025344372
           },
           "nodeIndex": "dim_date",
           "nodeLineageTag": "039c7479-cafe-409b-ab53-4a428e0237b7",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 635.95436806991,
-            "y": 761.57425356037538
+            "y": 806.82700031152331
           },
           "nodeIndex": "dim_drivers",
           "nodeLineageTag": "e7ea46a6-7c7b-4d7e-a2f1-64713f10b8b0",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 380.62757628103952,
-            "y": 480.95664851368178
+            "y": 526.20939526482971
           },
           "nodeIndex": "dim_riders",
           "nodeLineageTag": "3495dea1-e360-4dde-aac4-cc7b30ead67f",
@@ -50,12 +50,12 @@
         {
           "location": {
             "x": 978.1477186926578,
-            "y": 430.41465782052205
+            "y": 475.66740457167
           },
           "nodeIndex": "fact_trips",
           "nodeLineageTag": "3f9e27af-0db7-456c-862b-c278bc6977b8",
           "size": {
-            "height": 300,
+            "height": 556.8763449999999,
             "width": 234
           },
           "zIndex": 5
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 1491.3342246460343,
-            "y": 500.36678744259416
+            "y": 545.61953419374208
           },
           "nodeIndex": "DIM_reviews",
           "size": {
@@ -74,12 +74,26 @@
         },
         {
           "location": {
-            "x": 1094.4096738470269,
-            "y": 872.7915428534435
+            "x": 1296.3676278470268,
+            "y": 1031.4241936045914
           },
           "nodeIndex": "DIM_locations",
+          "nodeLineageTag": "68130ad9-ac96-49af-847b-b4fac6779c12",
           "size": {
             "height": 232.9075556985789,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1288.4129883649946,
+            "y": 65.045543276011358
+          },
+          "nodeIndex": "_Misure_Ferdinando",
+          "nodeLineageTag": "0f02df18-4e32-4ecf-a412-e61244a81f6c",
+          "size": {
+            "height": 104,
             "width": 234
           },
           "zIndex": 0

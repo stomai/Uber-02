@@ -98,14 +98,6 @@ table dim_drivers
 
 		annotation SummarizationSetBy = Automatic
 
-	column license_plate
-		dataType: string
-		lineageTag: c1ba1021-1797-4457-b21d-7739ea3c7dcf
-		summarizeBy: none
-		sourceColumn: license_plate
-
-		annotation SummarizationSetBy = Automatic
-
 	partition dim_drivers = m
 		mode: import
 		source =
