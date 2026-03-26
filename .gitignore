@@ -1,2 +1,15 @@
+# File di impostazioni locali (quelli che hai già)
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+
+# File temporanei di Power BI
+*.pbit
+*.pbi.user.json
+
+# Se usate i file di dati locali (opzionale, ma consigliato per non appesantire Git)
+# Rimuovi il commento se non vuoi caricare i dati estratti (cache) su Git
+# *.msshindextablebin
+
+# File di backup o temporanei di sistema
+Thumbs.db
+.DS_Store
