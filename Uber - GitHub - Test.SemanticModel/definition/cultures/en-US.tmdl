@@ -5718,6 +5718,126 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dim_veicoli": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_veicoli"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim veicoli": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_veicoli": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_veicoli.marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_veicoli",
+			          "ConceptualProperty": "Marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "marca": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_veicoli.modello": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_veicoli",
+			          "ConceptualProperty": "Modello"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "modello": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_veicoli.standard_uber": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_veicoli",
+			          "ConceptualProperty": "Standard_Uber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "standard uber": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Standard_Uber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Standard": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_veicoli.link_diretto_foto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_veicoli",
+			          "ConceptualProperty": "Link_diretto_Foto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "link diretto foto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Link_diretto_Foto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Auto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
 			    "misure_saverio": {
 			      "Definition": {
 			        "Binding": {
@@ -6983,6 +7103,138 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "misure_saverios_have_gaug_max_rating"
+			        }
+			      ]
+			    },
+			    "dim_veicoli_has_link_diretto_foto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_veicoli"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_veicoli": {
+			          "Target": {
+			            "Entity": "dim_veicoli"
+			          }
+			        },
+			        "dim_veicoli.link_diretto_foto": {
+			          "Target": {
+			            "Entity": "dim_veicoli.link_diretto_foto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_veicoli"
+			            },
+			            "Object": {
+			              "Role": "dim_veicoli.link_diretto_foto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_veicolis_have_link_diretto_fotos"
+			        }
+			      ]
+			    },
+			    "dim_veicoli_has_standard_uber": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_veicoli"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_veicoli": {
+			          "Target": {
+			            "Entity": "dim_veicoli"
+			          }
+			        },
+			        "dim_veicoli.standard_uber": {
+			          "Target": {
+			            "Entity": "dim_veicoli.standard_uber"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_veicoli"
+			            },
+			            "Object": {
+			              "Role": "dim_veicoli.standard_uber"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_veicolis_have_standard_ubers"
+			        }
+			      ]
+			    },
+			    "dim_veicoli_has_modello": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_veicoli"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_veicoli": {
+			          "Target": {
+			            "Entity": "dim_veicoli"
+			          }
+			        },
+			        "dim_veicoli.modello": {
+			          "Target": {
+			            "Entity": "dim_veicoli.modello"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_veicoli"
+			            },
+			            "Object": {
+			              "Role": "dim_veicoli.modello"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_veicolis_have_modellos"
+			        }
+			      ]
+			    },
+			    "dim_veicoli_has_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_veicoli"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_veicoli": {
+			          "Target": {
+			            "Entity": "dim_veicoli"
+			          }
+			        },
+			        "dim_veicoli.marca": {
+			          "Target": {
+			            "Entity": "dim_veicoli.marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_veicoli"
+			            },
+			            "Object": {
+			              "Role": "dim_veicoli.marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_veicolis_have_marcas"
 			        }
 			      ]
 			    },
