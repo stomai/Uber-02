@@ -1,9 +1,9 @@
 table dim_veicoli
-	lineageTag: 092078c4-8974-40ac-a552-9d94de2fe2a4
+	lineageTag: 5e703710-ca06-40c6-bf8c-ce93511dcfed
 
 	column Marca
 		dataType: string
-		lineageTag: 9aef156f-53d0-4b22-b5f9-c9df95ede542
+		lineageTag: cc8b1e24-2628-40d0-8d6f-ff0e741a332d
 		summarizeBy: none
 		sourceColumn: Marca
 
@@ -11,7 +11,7 @@ table dim_veicoli
 
 	column Modello
 		dataType: string
-		lineageTag: 5613fc17-32fc-4132-85ee-9c27ab248157
+		lineageTag: 331de612-f2f3-4628-a60a-b53c1996b1b6
 		summarizeBy: none
 		sourceColumn: Modello
 
@@ -19,7 +19,7 @@ table dim_veicoli
 
 	column Standard_Uber
 		dataType: string
-		lineageTag: 0034d3a0-3615-4206-8ffa-c0a531cb2303
+		lineageTag: f3d548d2-8815-43f3-8348-240cc67a6deb
 		summarizeBy: none
 		sourceColumn: Standard_Uber
 
@@ -27,7 +27,7 @@ table dim_veicoli
 
 	column Link_diretto_Foto
 		dataType: string
-		lineageTag: f8af1c83-5de9-45ab-a8c1-3e317d3d5985
+		lineageTag: ccb98483-9054-44f0-8d8a-4ec71f347e25
 		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: Link_diretto_Foto

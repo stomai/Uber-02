@@ -23,7 +23,7 @@ relationship dafc0eea-6b30-73ee-3452-2be693015218
 	fromColumn: fact_trips.pickup_location_id
 	toColumn: DIM_locations.location_id
 
-relationship cef905e2-1b25-9d73-f9fb-4bfe3997e0e2
+relationship 55d32705-c385-54a9-7f3b-c836b302f520
 	fromColumn: dim_drivers.vehicle_model
 	toColumn: dim_veicoli.Modello
 
