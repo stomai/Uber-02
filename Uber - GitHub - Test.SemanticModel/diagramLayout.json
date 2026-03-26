@@ -4,14 +4,23 @@
     {
       "ordinal": 0,
       "scrollPosition": {
+HEAD
+        "x": 0,
+        "y": 0
+
         "x": 49.603707999999983,
         "y": 462.02308717449932
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
       },
       "nodes": [
         {
           "location": {
             "x": 638.42207590753844,
+HEAD
+            "y": 90.5054935022958
+
             "y": 203.6373603801656
+2a7373f8d0ff7ebc62190208eb11cf691c0f578
           },
           "nodeIndex": "dim_date",
           "nodeLineageTag": "039c7479-cafe-409b-ab53-4a428e0237b7",
@@ -24,7 +33,11 @@
         {
           "location": {
             "x": 635.95436806991,
+HEAD
+            "y": 761.57425356037538
+
             "y": 874.70612043824519
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
           },
           "nodeIndex": "dim_drivers",
           "nodeLineageTag": "e7ea46a6-7c7b-4d7e-a2f1-64713f10b8b0",
@@ -37,7 +50,11 @@
         {
           "location": {
             "x": 380.62757628103952,
+HEAD
+            "y": 480.95664851368178
+
             "y": 594.0885153915516
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
           },
           "nodeIndex": "dim_riders",
           "nodeLineageTag": "3495dea1-e360-4dde-aac4-cc7b30ead67f",
@@ -50,7 +67,11 @@
         {
           "location": {
             "x": 978.1477186926578,
+HEAD
+            "y": 430.41465782052205
+
             "y": 543.54652469839186
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
           },
           "nodeIndex": "fact_trips",
           "nodeLineageTag": "3f9e27af-0db7-456c-862b-c278bc6977b8",
@@ -63,7 +84,11 @@
         {
           "location": {
             "x": 1491.3342246460343,
+HEAD
+            "y": 500.36678744259416
+
             "y": 613.498654320464
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
           },
           "nodeIndex": "DIM_reviews",
           "nodeLineageTag": "f902cc5c-f0e9-4897-bba7-78273be6f969",
@@ -76,7 +101,11 @@
         {
           "location": {
             "x": 1094.4096738470269,
+HEAD
+            "y": 872.7915428534435
+
             "y": 985.92340973131331
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
           },
           "nodeIndex": "DIM_locations",
           "nodeLineageTag": "68130ad9-ac96-49af-847b-b4fac6779c12",
@@ -85,6 +114,8 @@
             "width": 234
           },
           "zIndex": 0
+HEAD
+
         },
         {
           "location": {
@@ -111,6 +142,7 @@
             "width": 234
           },
           "zIndex": 0
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
         }
       ],
       "name": "Tutte le tabelle",
