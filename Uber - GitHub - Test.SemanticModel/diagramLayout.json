@@ -1,112 +1,252 @@
 {
+
   "version": "1.1.0",
+
   "diagrams": [
+
     {
+
       "ordinal": 0,
+
       "scrollPosition": {
-        "x": 0,
-        "y": 269.27727199999987
+
+        "x": 49.603707999999983,
+
+        "y": 462.02308717449932
+
       },
+
       "nodes": [
+
         {
+
           "location": {
+
             "x": 638.42207590753844,
-            "y": 135.75824025344372
+
+            "y": 203.6373603801656
+
           },
+
           "nodeIndex": "dim_date",
+
           "nodeLineageTag": "039c7479-cafe-409b-ab53-4a428e0237b7",
+
           "size": {
+
             "height": 296,
+
             "width": 234
+
           },
+
           "zIndex": 2
+
         },
+
         {
+
           "location": {
+
             "x": 635.95436806991,
-            "y": 806.82700031152331
+
+            "y": 874.70612043824519
+
           },
+
           "nodeIndex": "dim_drivers",
+
           "nodeLineageTag": "e7ea46a6-7c7b-4d7e-a2f1-64713f10b8b0",
+
           "size": {
+
             "height": 300,
+
             "width": 234
+
           },
+
           "zIndex": 3
+
         },
+
         {
+
           "location": {
+
             "x": 380.62757628103952,
-            "y": 526.20939526482971
+
+            "y": 594.0885153915516
+
           },
+
           "nodeIndex": "dim_riders",
+
           "nodeLineageTag": "3495dea1-e360-4dde-aac4-cc7b30ead67f",
+
           "size": {
+
             "height": 247.750538,
+
             "width": 234
+
           },
+
           "zIndex": 8
+
         },
+
         {
+
           "location": {
+
             "x": 978.1477186926578,
-            "y": 475.66740457167
+
+            "y": 543.54652469839186
+
           },
+
           "nodeIndex": "fact_trips",
+
           "nodeLineageTag": "3f9e27af-0db7-456c-862b-c278bc6977b8",
+
           "size": {
-            "height": 556.8763449999999,
+
+            "height": 300,
+
             "width": 234
+
           },
+
           "zIndex": 5
+
         },
+
         {
+
           "location": {
+
             "x": 1491.3342246460343,
-            "y": 545.61953419374208
+
+            "y": 613.498654320464
+
           },
+
           "nodeIndex": "DIM_reviews",
+
+          "nodeLineageTag": "f902cc5c-f0e9-4897-bba7-78273be6f969",
+
           "size": {
+
             "height": 248,
+
             "width": 234
+
           },
+
           "zIndex": 0
+
         },
+
         {
+
           "location": {
-            "x": 1296.3676278470268,
-            "y": 1031.4241936045914
+
+            "x": 1094.4096738470269,
+
+            "y": 985.92340973131331
+
           },
+
           "nodeIndex": "DIM_locations",
+
           "nodeLineageTag": "68130ad9-ac96-49af-847b-b4fac6779c12",
+
           "size": {
+
             "height": 232.9075556985789,
+
             "width": 234
+
           },
+
           "zIndex": 0
+
         },
+
         {
+
           "location": {
-            "x": 1288.4129883649946,
-            "y": 65.045543276011358
+
+            "x": 331.77004836499503,
+
+            "y": 1166.9475074027328
+
           },
-          "nodeIndex": "_Misure_Ferdinando",
-          "nodeLineageTag": "0f02df18-4e32-4ecf-a412-e61244a81f6c",
+
+          "nodeIndex": "dim_veicoli",
+
+          "nodeLineageTag": "5e703710-ca06-40c6-bf8c-ce93511dcfed",
+
           "size": {
-            "height": 104,
+
+            "height": 176,
+
             "width": 234
+
           },
+
           "zIndex": 0
+
+        },
+
+        {
+
+          "location": {
+
+            "x": 1443.5641762810392,
+
+            "y": 585.53419363800549
+
+          },
+
+          "nodeIndex": "Misure_Saverio",
+
+          "nodeLineageTag": "d63d9e41-d538-4807-ac81-42d90f360ee0",
+
+          "size": {
+
+            "height": 104,
+
+            "width": 234
+
+          },
+
+          "zIndex": 0
+
         }
+
       ],
+
       "name": "Tutte le tabelle",
+
       "zoomValue": 56.447393005377769,
+
       "pinKeyFieldsToTop": false,
+
       "showExtraHeaderInfo": false,
+
       "hideKeyFieldsWhenCollapsed": false,
+
       "tablesLocked": false
+
     }
+
   ],
+
   "selectedDiagram": "Tutte le tabelle",
+
   "defaultDiagram": "Tutte le tabelle"
+
 }
+ 
