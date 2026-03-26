@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "7f44671bf9bf4c8a2057",
   "position": {
     "x": 0,
@@ -28,6 +28,36 @@
               "queryRef": "dim_drivers.driver_name",
               "nativeQueryRef": "Driver",
               "displayName": "Driver"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_veicoli"
+                    }
+                  },
+                  "Property": "Link_diretto_Foto"
+                }
+              },
+              "queryRef": "dim_veicoli.Link_diretto_Foto",
+              "nativeQueryRef": "Link_diretto_Foto",
+              "displayName": "Auto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_veicoli"
+                    }
+                  },
+                  "Property": "Standard_Uber"
+                }
+              },
+              "queryRef": "dim_veicoli.Standard_Uber",
+              "nativeQueryRef": "Standard",
+              "displayName": "Standard"
             },
             {
               "field": {
@@ -171,7 +201,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.1
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -195,9 +225,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -528,7 +557,33 @@
             "totals": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "label": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Totale'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.1
+                    }
+                  }
                 }
               }
             }
@@ -590,7 +645,7 @@
             "styleHeader": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -675,6 +730,20 @@
                   }
                 }
               }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           },
           "selector": {
@@ -701,10 +770,87 @@
                   }
                 }
               }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
             }
           },
           "selector": {
             "metadata": "fact_trips.trip_id"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_veicoli.Link_diretto_Foto"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_veicoli.Standard_Uber"
           }
         }
       ],
@@ -728,7 +874,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "237.33333100896587D"
+                  "Value": "250.42768578345752D"
                 }
               }
             }
@@ -756,7 +902,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "289.1845891898275D"
+                  "Value": "282.03674801360035D"
                 }
               }
             }
@@ -770,13 +916,41 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "168.14076683732807D"
+                  "Value": "180.05130512964993D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "fact_trips.trip_id"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "152D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_veicoli.Standard_Uber"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "111.32683934756652D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_veicoli.Link_diretto_Foto"
           }
         }
       ]
@@ -966,6 +1140,19 @@
         }
       ],
       "lockAspect": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
         {
           "properties": {
             "show": {

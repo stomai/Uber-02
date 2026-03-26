@@ -1,0 +1,60 @@
+table dim_veicoli
+	lineageTag: 092078c4-8974-40ac-a552-9d94de2fe2a4
+
+	column Marca
+		dataType: string
+		lineageTag: 9aef156f-53d0-4b22-b5f9-c9df95ede542
+		summarizeBy: none
+		sourceColumn: Marca
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modello
+		dataType: string
+		lineageTag: 5613fc17-32fc-4132-85ee-9c27ab248157
+		summarizeBy: none
+		sourceColumn: Modello
+
+		annotation SummarizationSetBy = Automatic
+
+	column Standard_Uber
+		dataType: string
+		lineageTag: 0034d3a0-3615-4206-8ffa-c0a531cb2303
+		summarizeBy: none
+		sourceColumn: Standard_Uber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Link_diretto_Foto
+		dataType: string
+		lineageTag: f8af1c83-5de9-45ab-a8c1-3e317d3d5985
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Link_diretto_Foto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_veicoli = m
+		mode: import
+		source =
+				let
+				    Origine = Csv.Document(File.Contents("C:\Users\utente\Desktop\Progetto di Gruppo - Uber\Veicoli.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Modificato tipo" = Table.TransformColumnTypes(Origine,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}}),
+				    #"Rimosse prime righe" = Table.Skip(#"Modificato tipo",1),
+				    #"Rinominate colonne" = Table.RenameColumns(#"Rimosse prime righe",{{"Column1", "Marca"}, {"Column2", "Modello"}, {"Column3", "Standard_Uber"}}),
+				    #"Colonna condizionale aggiunta" = Table.AddColumn(#"Rinominate colonne", "Personalizzato", each if [Standard_Uber] = "COMFORT" then "https://drive.google.com/file/d/1p42-y8TYEkPyje0C7xf3_M-8XBnWrDKE/view?usp=drive_link" else if [Standard_Uber] = "XL" then "https://drive.google.com/file/d/1lakRVlPq7a_ijkdB0EepzDT5mG9qR9ca/view?usp=drive_link" else if [Standard_Uber] = "UBER X" then "https://drive.google.com/file/d/1roisUz3YBV3rXKm710vQfnnI58yKf-ZE/view?usp=drive_link" else if [Standard_Uber] = "BLACK" then "https://drive.google.com/file/d/1-nc38Y0xJ14frkf6zGwCy4O3UfJ7JixG/view?usp=drive_link" else null),
+				    #"Rinominate colonne1" = Table.RenameColumns(#"Colonna condizionale aggiunta",{{"Personalizzato", "Foto"}}),
+				    #"Aggiunta colonna personalizzata" = Table.AddColumn(#"Rinominate colonne1", "Personalizzato", each "https://drive.google.com/thumbnail?id=" & Text.BetweenDelimiters([Foto], "/d/", "/view") & "&sz=w1000"),
+				    #"Rinominate colonne2" = Table.RenameColumns(#"Aggiunta colonna personalizzata",{{"Personalizzato", "Link_diretto_Foto"}}),
+				    #"Rimosse colonne" = Table.RemoveColumns(#"Rinominate colonne2",{"Foto"}),
+				    #"Testo in minuscolo" = Table.TransformColumns(#"Rimosse colonne",{{"Standard_Uber", Text.Lower, type text}}),
+				    #"Convertita in maiuscolo ogni parola" = Table.TransformColumns(#"Testo in minuscolo",{{"Standard_Uber", Text.Proper, type text}}),
+				    #"Sostituito valore" = Table.ReplaceValue(#"Convertita in maiuscolo ogni parola","Xl","XL",Replacer.ReplaceText,{"Standard_Uber"}),
+				    #"Sostituito valore1" = Table.ReplaceValue(#"Sostituito valore","Uber X","Uber-X",Replacer.ReplaceText,{"Standard_Uber"})
+				in
+				    #"Sostituito valore1"
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Table
+
