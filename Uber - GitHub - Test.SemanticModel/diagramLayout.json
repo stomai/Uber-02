@@ -86,6 +86,19 @@
         },
         {
           "location": {
+            "x": 331.77004836499503,
+            "y": 1166.9475074027328
+          },
+          "nodeIndex": "dim_veicoli",
+          "nodeLineageTag": "5e703710-ca06-40c6-bf8c-ce93511dcfed",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
             "x": 1443.5641762810392,
             "y": 585.53419363800549
           },

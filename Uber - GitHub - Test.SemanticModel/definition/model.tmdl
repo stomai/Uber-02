@@ -18,6 +18,7 @@ ref table dim_riders
 ref table dim_drivers
 ref table dim_date
 ref table DIM_locations
+ref table dim_veicoli
 ref table Misure_Saverio
 
 ref cultureInfo en-US
