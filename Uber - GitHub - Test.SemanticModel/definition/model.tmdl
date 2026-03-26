@@ -18,6 +18,12 @@ ref table dim_riders
 ref table dim_drivers
 ref table dim_date
 ref table DIM_locations
+HEAD
+
+ref table dim_veicoli
+ref table Misure_Saverio
+ref table misure
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
 
 ref cultureInfo en-US
 
