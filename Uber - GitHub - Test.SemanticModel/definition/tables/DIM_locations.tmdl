@@ -21,6 +21,7 @@ table DIM_locations
 	column city
 		dataType: string
 		lineageTag: 25112b9c-3db6-4343-92f7-b6711b8fcedc
+		dataCategory: City
 		summarizeBy: none
 		sourceColumn: city
 
@@ -29,6 +30,7 @@ table DIM_locations
 	column latitude
 		dataType: double
 		lineageTag: de7da5f2-37bd-44fc-b113-dd5bf67b8c70
+		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: latitude
 
@@ -39,6 +41,7 @@ table DIM_locations
 	column longitude
 		dataType: double
 		lineageTag: 6eda20f7-4cd2-4099-bd40-e8089b769e30
+		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: longitude
 

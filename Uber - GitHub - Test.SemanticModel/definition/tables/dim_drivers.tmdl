@@ -97,10 +97,22 @@ table dim_drivers
 		sourceColumn: years_experience
 
  HEAD
+ HEAD
 		annotation SummarizationSetBy = Automatic
 
 		annotation SummarizationSetBy = User
  2461c32a2f6b8835b58de1f3506abed011ae75f2
+
+		annotation SummarizationSetBy = Automatic
+
+	column license_plate
+		dataType: string
+		lineageTag: c1ba1021-1797-4457-b21d-7739ea3c7dcf
+		summarizeBy: none
+		sourceColumn: license_plate
+
+		annotation SummarizationSetBy = Automatic
+ 5b2065667c84414ca858c3ca48effc6be6c6dbb2
 
 	partition dim_drivers = m
 		mode: import
@@ -108,12 +120,9 @@ table dim_drivers
 				let
 				    Origine = Odbc.DataSource("dsn=MySql_PowerBi", [HierarchicalNavigation=true]),
 				    uber_Database = Origine{[Name="uber",Kind="Database"]}[Data],
-				    dim_drivers_Table = uber_Database{[Name="dim_drivers",Kind="Table"]}[Data],
-				    #"Pulito testo" = Table.TransformColumns(dim_drivers_Table,{{"driver_name", Text.Clean, type text}})
+				    dim_drivers_Table = uber_Database{[Name="dim_drivers",Kind="Table"]}[Data]
 				in
-				    #"Pulito testo"
+				    dim_drivers_Table
 
 	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navigazione
 

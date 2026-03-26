@@ -148,6 +148,13 @@ table fact_trips
 
 		annotation SummarizationSetBy = Automatic
 
+	column Ora = HOUR(TIMEVALUE(fact_trips[ora_richiesta]))
+		formatString: 0
+		lineageTag: cc9af721-4884-4969-97fd-cc7d42b761a4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
 	partition fact_trips = m
 		mode: import
 		source =

@@ -9,10 +9,14 @@ model Model
 annotation __PBI_TimeIntelligenceEnabled = 0
 
  HEAD
+ HEAD
 annotation PBI_QueryOrder = ["fact_trips","DIM_reviews","dim_riders","dim_drivers","dim_date","DIM_locations","_Misure_Ferdinando"]
 
 annotation PBI_QueryOrder = ["fact_trips","DIM_reviews","dim_riders","dim_drivers","dim_date","DIM_locations","dim_veicoli","Misure_Saverio"]
  2461c32a2f6b8835b58de1f3506abed011ae75f2
+
+annotation PBI_QueryOrder = ["fact_trips","DIM_reviews","dim_riders","dim_drivers","dim_date","DIM_locations"]
+ 5b2065667c84414ca858c3ca48effc6be6c6dbb2
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -23,10 +27,19 @@ ref table dim_drivers
 ref table dim_date
 ref table DIM_locations
  HEAD
+ HEAD
 ref table _Misure_Ferdinando
 
 ref table Misure_Saverio
  2461c32a2f6b8835b58de1f3506abed011ae75f2
+
+HEAD
+
+ref table dim_veicoli
+ref table Misure_Saverio
+ref table misure
+22a7373f8d0ff7ebc62190208eb11cf691c0f578
+ 5b2065667c84414ca858c3ca48effc6be6c6dbb2
 
 ref cultureInfo en-US
 
