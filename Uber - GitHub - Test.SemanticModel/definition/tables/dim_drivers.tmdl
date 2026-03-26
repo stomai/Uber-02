@@ -54,7 +54,7 @@ table dim_drivers
 		dataType: int64
 		formatString: 0
 		lineageTag: 05bf31fa-7c49-4e7e-8937-db0c4f23456a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: vehicle_year
 
 		annotation SummarizationSetBy = Automatic
@@ -62,7 +62,7 @@ table dim_drivers
 	column driver_rating
 		dataType: double
 		lineageTag: 3618937a-7f0e-403c-9d25-e8de65c82279
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: driver_rating
 
 		annotation SummarizationSetBy = Automatic
@@ -84,7 +84,7 @@ table dim_drivers
 		dataType: int64
 		formatString: 0
 		lineageTag: dc156296-6464-4bd1-8634-5bc5e0852c76
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: is_active
 
 		annotation SummarizationSetBy = Automatic
@@ -96,7 +96,15 @@ table dim_drivers
 		summarizeBy: none
 		sourceColumn: years_experience
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
+
+	column license_plate
+		dataType: string
+		lineageTag: c1ba1021-1797-4457-b21d-7739ea3c7dcf
+		summarizeBy: none
+		sourceColumn: license_plate
+
+		annotation SummarizationSetBy = Automatic
 
 	partition dim_drivers = m
 		mode: import
@@ -104,12 +112,9 @@ table dim_drivers
 				let
 				    Origine = Odbc.DataSource("dsn=MySql_PowerBi", [HierarchicalNavigation=true]),
 				    uber_Database = Origine{[Name="uber",Kind="Database"]}[Data],
-				    dim_drivers_Table = uber_Database{[Name="dim_drivers",Kind="Table"]}[Data],
-				    #"Pulito testo" = Table.TransformColumns(dim_drivers_Table,{{"driver_name", Text.Clean, type text}})
+				    dim_drivers_Table = uber_Database{[Name="dim_drivers",Kind="Table"]}[Data]
 				in
-				    #"Pulito testo"
+				    dim_drivers_Table
 
 	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navigazione
 

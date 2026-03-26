@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "1a455d8fe9951bb71830",
   "position": {
     "x": 768,
     "y": 416,
     "z": 0,
     "height": 288,
-    "width": 480.00000000000006
+    "width": 480.00000000000006,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "columnChart",
@@ -128,6 +129,25 @@
   },
   "filterConfig": {
     "filters": [
+      {
+        "name": "b8201fe6852d61e2c5d0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_trips"
+                  }
+                },
+                "Property": "payment_amount"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
       {
         "name": "c150dc6279498da078ea",
         "field": {
