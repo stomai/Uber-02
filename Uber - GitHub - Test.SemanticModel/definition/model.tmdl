@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["fact_trips","DIM_reviews","dim_riders","dim_drivers","dim_date","DIM_locations","dim_veicoli","Misure_Saverio"]
+annotation PBI_QueryOrder = ["fact_trips","DIM_reviews","dim_riders","dim_drivers","dim_date","DIM_locations"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -20,6 +20,7 @@ ref table dim_date
 ref table DIM_locations
 ref table dim_veicoli
 ref table Misure_Saverio
+ref table misure
 
 ref cultureInfo en-US
 
