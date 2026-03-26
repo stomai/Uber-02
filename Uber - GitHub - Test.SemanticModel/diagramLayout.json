@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 49.603707999999983,
-        "y": 531.46829999999977
+        "x": 0,
+        "y": 174.32160510318749
       },
       "nodes": [
         {
           "location": {
             "x": 638.42207590753844,
-            "y": 305.45604057024838
+            "y": 1546.3712053868821
           },
           "nodeIndex": "dim_date",
           "nodeLineageTag": "039c7479-cafe-409b-ab53-4a428e0237b7",
@@ -24,12 +24,12 @@
         {
           "location": {
             "x": 635.95436806991,
-            "y": 976.524800628328
+            "y": 2217.4399654449617
           },
           "nodeIndex": "dim_drivers",
           "nodeLineageTag": "e7ea46a6-7c7b-4d7e-a2f1-64713f10b8b0",
           "size": {
-            "height": 436.41019699999993,
+            "height": 300,
             "width": 234
           },
           "zIndex": 3
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 380.62757628103952,
-            "y": 695.90719558163437
+            "y": 1936.8223603982683
           },
           "nodeIndex": "dim_riders",
           "nodeLineageTag": "3495dea1-e360-4dde-aac4-cc7b30ead67f",
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 978.1477186926578,
-            "y": 645.36520488847464
+            "x": 988.7770846926577,
+            "y": 1655.9774397051087
           },
           "nodeIndex": "fact_trips",
           "nodeLineageTag": "3f9e27af-0db7-456c-862b-c278bc6977b8",
@@ -62,10 +62,11 @@
         },
         {
           "location": {
-            "x": 1491.3342246460343,
-            "y": 715.31733451054674
+            "x": 1794.271155646034,
+            "y": 1711.7570813271809
           },
           "nodeIndex": "DIM_reviews",
+          "nodeLineageTag": "f902cc5c-f0e9-4897-bba7-78273be6f969",
           "size": {
             "height": 248,
             "width": 234
@@ -74,10 +75,11 @@
         },
         {
           "location": {
-            "x": 1094.4096738470269,
-            "y": 1087.7420899213962
+            "x": 1296.3676278470268,
+            "y": 2133.7855667014292
           },
           "nodeIndex": "DIM_locations",
+          "nodeLineageTag": "68130ad9-ac96-49af-847b-b4fac6779c12",
           "size": {
             "height": 232.9075556985789,
             "width": 234
@@ -86,26 +88,12 @@
         },
         {
           "location": {
-            "x": 1443.5641762810392,
-            "y": 687.35287382808826
+            "x": 1697.6435793649944,
+            "y": 900.99144849133381
           },
-          "nodeIndex": "Misure_Saverio",
-          "nodeLineageTag": "d63d9e41-d538-4807-ac81-42d90f360ee0",
+          "nodeIndex": "misure",
           "size": {
-            "height": 104,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 291.02414536499504,
-            "y": 1138.0008007191225
-          },
-          "nodeIndex": "dim_veicoli",
-          "nodeLineageTag": "092078c4-8974-40ac-a552-9d94de2fe2a4",
-          "size": {
-            "height": 176,
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

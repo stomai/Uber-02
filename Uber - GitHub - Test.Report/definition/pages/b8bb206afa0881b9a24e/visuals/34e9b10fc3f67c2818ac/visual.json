@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "5ae1371a3697880b3384",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "34e9b10fc3f67c2818ac",
   "position": {
-    "x": 22.5,
-    "y": 517.5,
-    "z": 6000,
-    "height": 435,
-    "width": 1230,
-    "tabOrder": 6000
+    "x": 0,
+    "y": 0,
+    "z": 1,
+    "height": 80,
+    "width": 1280,
+    "tabOrder": 1
   },
   "visual": {
     "visualType": "shape",
@@ -18,14 +18,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangleRounded'"
-                }
-              }
-            },
-            "rectangleRoundedCurve": {
-              "expr": {
-                "Literal": {
-                  "Value": "8L"
+                  "Value": "'rectangle'"
                 }
               }
             }
@@ -48,26 +41,12 @@
       "fill": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "outline": [
-        {
-          "properties": {
-            "lineColor": {
+            "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#00C896'"
                     }
                   }
                 }
@@ -78,14 +57,27 @@
             "id": "default"
           }
         }
-      ],
-      "shadow": [
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#00C896'"
+                    }
+                  }
                 }
               }
             }
